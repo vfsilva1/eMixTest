@@ -54,8 +54,7 @@ namespace TesteCandidato
             //    [gia]         NVARCHAR (500) NULL
             //);
 
-            //string cep = Console.ReadLine();
-            string cep = "13050020";
+            string cep = Console.ReadLine();
             string result = string.Empty;
 
             //TODO: Implementar forma de fazer o usuário poder errar várias vezes o CEP informado
