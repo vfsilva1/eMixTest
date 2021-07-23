@@ -1,0 +1,20 @@
+C:\Users\Joao Yunes\source\repos\TesteCandidato\TesteCandidato\bin\Debug\TesteCandidato.exe.config
+C:\Users\Joao Yunes\source\repos\TesteCandidato\TesteCandidato\bin\Debug\TesteCandidato.exe
+C:\Users\Joao Yunes\source\repos\TesteCandidato\TesteCandidato\bin\Debug\TesteCandidato.pdb
+C:\Users\Joao Yunes\source\repos\TesteCandidato\TesteCandidato\obj\Debug\TesteCandidato.csprojAssemblyReference.cache
+C:\Users\Joao Yunes\source\repos\TesteCandidato\TesteCandidato\obj\Debug\TesteCandidato.csproj.CoreCompileInputs.cache
+C:\Users\Joao Yunes\source\repos\TesteCandidato\TesteCandidato\obj\Debug\TesteCandidato.exe
+C:\Users\Joao Yunes\source\repos\TesteCandidato\TesteCandidato\obj\Debug\TesteCandidato.pdb
+C:\Users\Joao Yunes\source\repos\TesteCandidato\TesteCandidato\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Joao Yunes\source\repos\TesteCandidato\TesteCandidato\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Joao Yunes\source\repos\TesteCandidato\TesteCandidato\obj\Debug\TesteCandidato.csproj.CopyComplete
+C:\Users\vitor\Downloads\TesteCandidato\TesteCandidato\TesteCandidato\bin\Debug\TesteCandidato.exe.config
+C:\Users\vitor\Downloads\TesteCandidato\TesteCandidato\TesteCandidato\bin\Debug\TesteCandidato.exe
+C:\Users\vitor\Downloads\TesteCandidato\TesteCandidato\TesteCandidato\bin\Debug\TesteCandidato.pdb
+C:\Users\vitor\Downloads\TesteCandidato\TesteCandidato\TesteCandidato\bin\Debug\Newtonsoft.Json.dll
+C:\Users\vitor\Downloads\TesteCandidato\TesteCandidato\TesteCandidato\bin\Debug\Newtonsoft.Json.xml
+C:\Users\vitor\Downloads\TesteCandidato\TesteCandidato\TesteCandidato\obj\Debug\TesteCandidato.csprojAssemblyReference.cache
+C:\Users\vitor\Downloads\TesteCandidato\TesteCandidato\TesteCandidato\obj\Debug\TesteCandidato.csproj.CoreCompileInputs.cache
+C:\Users\vitor\Downloads\TesteCandidato\TesteCandidato\TesteCandidato\obj\Debug\TesteCandidato.csproj.CopyComplete
+C:\Users\vitor\Downloads\TesteCandidato\TesteCandidato\TesteCandidato\obj\Debug\TesteCandidato.exe
+C:\Users\vitor\Downloads\TesteCandidato\TesteCandidato\TesteCandidato\obj\Debug\TesteCandidato.pdb
