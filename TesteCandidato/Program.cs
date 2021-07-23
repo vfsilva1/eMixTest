@@ -4,6 +4,7 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Net;
+using System.Text;
 
 namespace TesteCandidato
 {
@@ -53,24 +54,29 @@ namespace TesteCandidato
             //    [gia]         NVARCHAR (500) NULL
             //);
 
-            string cep = Console.ReadLine();
+            //string cep = Console.ReadLine();
+            string cep = "13050020";
             string result = string.Empty;
 
             //TODO: Implementar forma de fazer o usuário poder errar várias vezes o CEP informado
             //TODO: Melhorar validação do CEP.
-            if (cep.Length > 8)
+            while (cep.Length > 8 || cep.Length < 8)
             {
-                Console.WriteLine("CEP Inválido");
-
+                Console.WriteLine("CEP Inválido! Digite o CEP novamente: ");
                 cep = Console.ReadLine();
             }
 
             //Exemplo CEP 13050020
             string viaCEPUrl = "https://viacep.com.br/ws/" + cep + "/json/";
 
-            //TODO: Resolver dados com caracter especial no retorno do JSON 
-            WebClient client = new WebClient();
-            result = client.DownloadString(viaCEPUrl);
+            //TODO: Resolver dados com caracter especial no retorno do JSON
+            using (WebClient client = new WebClient())
+            {
+                ServicePointManager.Expect100Continue = true;
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                client.Encoding = Encoding.UTF8;
+                result = client.DownloadString(viaCEPUrl);
+            }
 
             //TODO: Tratar CEP Inválido.
 
@@ -101,6 +107,7 @@ namespace TesteCandidato
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -113,29 +120,22 @@ namespace TesteCandidato
 
             //TODO: Retornar os dados do CEP infomado no início para o usuário
 
-            Console.WriteLine("Deseja visualizar todos os CEPs alguma UF? Se sim, informar UF, se não, informar sair.");
+            Console.WriteLine("Deseja visualizar todos os CEPs de alguma UF? Se sim, informar UF, se não, informar sair.");
             string resposta = Console.ReadLine();
 
             if (resposta == "sair")
             {
                 return;
             }
-
-            if (resposta.Length > 2)
+            while (resposta.Length > 2 || resposta.Length < 2)
             {
-                Console.WriteLine("UF inválida");
+                Console.WriteLine("UF inválida. Digite novamente: ");
                 resposta = Console.ReadLine();
             }
-
-            if (resposta == "sair")
-            {
-                return;
-            }
-
-
+            resposta = resposta.ToUpper();
 
             connection = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=CEP;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;");
-            sqlCommand = new SqlCommand("Select * from CEP", connection);
+            sqlCommand = new SqlCommand("Select * from CEP WHERE uf='" + resposta +"'", connection);
 
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataSet ds = new DataSet();
